@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Dream Home Awaits You</title>
+    <link rel="stylesheet" href="properties.css" />
+  </head>
+  <body>
+    <header>
+      <h1>SUPERSONIC REALTY <br />REAL ESTATE CO.</h1>
+      <h2>We are more than just a firm.</h2>
+      <h2>
+        Let us help<br />
+        you find your<br />
+        dream home...
+      </h2>
+
+    <section>
+    <button id="show-buy">BUY PROPERTIES</button>
+    <div id="buy-list" class="property-grid" style="display: none;"></div>
+    </section>
+
+    <section>
+    <button id="show-rent">RENT PROPERTIES</button>
+    <div id="rent-list" class="property-grid"></div>
+    </section>
+
+    <section>
+    <button id="show-favourties">FAVOURITES</button>  
+    <div id="favourites-list" class="property-grid"></div>
+    </section>
+    </header>
+    <section id="about">
+      <div class="container1">
+        <h3>ABOUT US</h3>
+        <p>
+          Welcome to supersonic realty! We are passionate about transforming
+          your real estate dreams into reality.<br />
+          We can help you find your home by buying or renting.<br />
+          Explore our curated listings, save your favourite properties, and
+          discover locations with ease.<br />
+          We are more than just a real estate company,we are part of the
+          community,commited to growth and prosperity.<br />
+          Are you ready to begin your real estate journey?
+        </p>
+      </div>
+    </section>
+
+    <section id="reviews">
+      <div class="container2">
+        <h3>HAPPY CLIENTS :)</h3>
+        <div class="reviews-container">
+          <div class="review-card">
+            <p>
+              Amazing and efficient services!<br />
+              I found my dream home in no time.
+            </p>
+            <p>Stella B.</p>
+          </div>
+          <div class="review-card">
+            <p>
+              Would highly recommend.<br />
+              The listings are as shown in real life or even better.
+            </p>
+            <p>Tina N.</p>
+          </div>
+          <div class="review-card">
+            <p>
+              Great experience. <br />The favourites feature helped me<br />
+              shortlist properties easily.
+            </p>
+            <p>Evans M.</p>
+          </div>
+          <div class="review-card">
+            <p>
+              Quick response.<br />
+              I had so many inquires and they did not hestitate to answer.
+            </p>
+            <p>Sonia M.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container3">
+        <h3>
+          LET US TALK!!!<br />
+          Do you have any questions???
+        </h3>
+        <div class="contact-grid">
+          <div class="contact-column">
+            <h4>Business Hours</h4>
+            <h4>
+              Monday to Friday<br />
+              9:00 am to 6:00 pm
+            </h4>
+            <h4>
+              Saturday<br />
+              9:00 am to 12:00 pm
+            </h4>
+            <h4>Sunday is appointment only.</h4>
+          </div>
+          <div class="contact-column">
+            <h4>Main Office<br />Purple Tower<br />Nairobi, Kenya</h4>
+            <h4>Telephone: (+254) 7123 45678</h4>
+            <h4>Email: supersonicrealty@gmail.com</h4>
+            <h4>Socials: @supersonicrealty</h4>
+          </div>
+        </div>
+
+        <form id="contact-form">
+          <label for="name">Name:</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter your name here"
+            required
+          />
+
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email here"
+            required
+          />
+
+          <label for="message">Message:</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="3"
+            placeholder="Type your message here.."
+            required
+          ></textarea>
+
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+    <script src="properties.js"></script>
+  </body>
+</html>

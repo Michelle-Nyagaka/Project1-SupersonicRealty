@@ -1,0 +1,70 @@
+{ 
+    "properties" : [
+    {
+        "id" : "1",
+        "title" : "Luxury Apartment In Nairobi",
+        "type" : "buy",
+        "price": "$120,000",
+        "location" : "Nairobi, Kenya",
+        "bedrooms" : "3",
+        "bathrooms" : "2",
+        "imageUrl" : "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDB8fGhvdXNlc3xlbnwwfHwwfHx8MA%3D%3D",
+         "isFavourite": true
+    },
+    {
+        "id" : "2",
+        "title" : "Penthouse Apartment In Mombasa",
+        "type" : "buy",
+        "price": "$250,000",
+        "location" : "Mombasa, Kenya",
+        "bedrooms" : "4",
+        "bathrooms" : "3",
+        "imageUrl" : "https://images.unsplash.com/photo-1709346500470-1997146efd20?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTQyfHxiZWFjaGZyb250JTIwdmlsbGF8ZW58MHx8MHx8fDA%3D",
+         "isFavourite": true
+    },
+    {
+        "id" : "3",
+        "title" : "Beachfront Villa In Diani",
+        "type" : "buy",
+        "price": "$100,000",
+        "location" : "Diani, Kenya",
+        "bedrooms" : "2",
+        "bathrooms" : "2",
+        "imageUrl" : "https://images.unsplash.com/photo-1602343168117-bb8ffe3e2e9f?w=1600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8aG91c2VzfGVufDB8fDB8fHww",
+         "isFavourite": true
+    },
+    {
+        "id" : "4",
+        "title" : "Modern Studio Flat in Nairobi",
+        "type" : "rent",
+        "price": "$40,000 ",
+        "location" : "Nairobi, Kenya",
+        "bedrooms" : "1",
+        "bathrooms" : "1",
+        "imageUrl" : "https://images.unsplash.com/photo-1665522558736-b11b6f2da8a6?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+         "isFavourite": true
+    },
+    {
+        "id" : "5",
+        "title" : "Affordable Townhouse in Mombasa",
+        "type" : "rent",
+        "price": "$95,000",
+        "location" : "Nairobi, Kenya",
+        "bedrooms" : "3",
+        "bathrooms" : "",
+        "imageUrl" : "https://images.unsplash.com/photo-1741288341276-8d0d96178562?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjgyfHxiZWFjaGZyb250JTIwdmlsbGF8ZW58MHx8MHx8fDA%3D",
+         "isFavourite": true
+    },
+    {
+        "id" : "6",
+        "title" : "Spacious Mansion In Diani",
+        "type" : "rent",
+        "price": "$8,000",
+        "location" : "Mombasa, Kenya",
+        "bedrooms" : "3",
+        "bathrooms" : "2",
+        "imageUrl" : "https://images.unsplash.com/photo-1721246053652-98054672bdcf?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTA4fHxiZWFjaGZyb250JTIwdmlsbGF8ZW58MHx8MHx8fDA%3D",
+        "isFavourite": true
+    }
+    ]
+}
