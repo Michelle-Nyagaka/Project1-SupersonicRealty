@@ -164,7 +164,6 @@ p {
   background-color: lightgrey;
 }
 
-/* Property listings */
 .listings {
   display: grid;
   grid-template-columns: repeat(1fr, 1fr, fr);
@@ -203,4 +202,7 @@ p {
   background: none;
   font-size: 20px;
   cursor: pointer;
+}
+footer {
+  background-color: lightgray;
 }
