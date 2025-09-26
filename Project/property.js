@@ -1,14 +1,16 @@
-const apiURL = "http://localhost:3000/properties";
+const apiURL = "http://localhost:3000/properties"; //API from JSON
 
+//My buttons
 const buyBtn = document.getElementById("show-buy");
 const rentBtn = document.getElementById("show-rent");
 const favBtn = document.getElementById("show-favourites");
 
+//My <li> of properties
 const forSale = document.getElementById("buy-list");
 const forRent = document.getElementById("rent-list");
 const favourites = document.getElementById("favourites-list");
 
-// Hide sections initially
+// Hide sections untill someone clicks it
 forSale.style.display = "none";
 forRent.style.display = "none";
 favourites.style.display = "none";
@@ -16,10 +18,12 @@ favourites.style.display = "none";
 // Store all fetched properties
 let allProperties = [];
 
+//creates property function
 function createPropertyCard(property) {
   const card = document.createElement("div");
-  card.classList.add("property-card");
+  card.classList.add("property-card"); //adds a css section for styling
 
+  //inserts html content to the card
   card.innerHTML = `
     <img src="${property.imageUrl || property.images?.[0] || ""}" 
          alt="${property.title}" 
@@ -32,37 +36,42 @@ function createPropertyCard(property) {
     <button class="fav-btn">${property.isFavourite ? "💖" : "♡"}</button>
   `;
 
-  const favBtn = card.querySelector(".fav-btn");
+  const favBtn = card.querySelector(".fav-btn"); //find btn inside card
   if (favBtn) {
     favBtn.addEventListener("click", (e) => {
-      e.stopPropagation();
-      property.isFavourite = !property.isFavourite;
-      favBtn.textContent = property.isFavourite ? "💖" : "♡";
-      updateFavourite(property);
+      e.stopPropagation(); //prevents clicking from affecting the card
+      property.isFavourite = !property.isFavourite; //true or false
+      favBtn.textContent = property.isFavourite ? "💖" : "♡"; //updates icons
+      updateFavourite(property); //updates fav section
     });
   }
 
   card.addEventListener("mouseover", () => {
-    card.style.backgroundColor = "#dee1e3ff";
-    card.style.cursor = "pointer";
+    //creates hover effect
+    card.style.backgroundColor = "#dee1e3ff"; //changes color when hovered
+    card.style.cursor = "pointer"; //shows pointer icon
   });
 
   card.addEventListener("mouseout", () => {
-    card.style.backgroundColor = "#fff";
+    card.style.backgroundColor = "#fff"; //resets color when hovered
     card.style.cursor = "default";
   });
 
-  return card;
+  return card; //sends the finished cards
 }
 
 function updateFavourite(property) {
+  //updates fav section
   if (property.isFavourite) {
+    //adds and removes cards from favs list
     const exists = [...favourites.querySelectorAll("h3")].some(
+      //checks if property is in favs
       (h3) => h3.textContent === property.title
     );
-    if (!exists) favourites.appendChild(createPropertyCard(property));
+    if (!exists) favourites.appendChild(createPropertyCard(property)); //if not already there add it
   } else {
     favourites.querySelectorAll(".property-card").forEach((card) => {
+      //if unfav remove it
       if (card.querySelector("h3").textContent === property.title) {
         card.remove();
       }
@@ -70,27 +79,30 @@ function updateFavourite(property) {
   }
 }
 
-// Fetch all properties once on page load
+// fetch all properties from JSON
 function fetchProperties() {
-  fetch(apiURL)
-    .then((res) => res.json())
+  fetch(apiURL) //makes request to server
+    .then((res) => res.json()) //converts a response
     .then((data) => {
-      // Adjust this depending on your JSON structure
+      // the API returns the properties from JSON
       allProperties = data.properties || data;
-
+      //goes through the properties and puts it in place
       allProperties.forEach((property) => {
-        if (property.type === "buy") forSale.appendChild(createPropertyCard(property));
-        if (property.type === "rent") forRent.appendChild(createPropertyCard(property));
-        if (property.isFavourite) favourites.appendChild(createPropertyCard(property));
+        if (property.type === "buy")
+          forSale.appendChild(createPropertyCard(property));
+        if (property.type === "rent")
+          forRent.appendChild(createPropertyCard(property));
+        if (property.isFavourite)
+          favourites.appendChild(createPropertyCard(property));
       });
     })
-    .catch((err) => console.error("Error fetching properties:", err));
+    .catch((err) => console.error("Error fetching properties:", err)); //catches error
 }
 
-// Call fetch on page load
+// calls fetch on page load
 fetchProperties();
 
-// Toggle sections on button click
+//btn even litsenters ,it shows or hides sections when each button is clicked
 buyBtn.addEventListener("click", () => {
   forSale.style.display = forSale.style.display === "none" ? "grid" : "none";
 });
@@ -100,6 +112,6 @@ rentBtn.addEventListener("click", () => {
 });
 
 favBtn.addEventListener("click", () => {
-  favourites.style.display = favourites.style.display === "none" ? "grid" : "none";
+  favourites.style.display =
+    favourites.style.display === "none" ? "grid" : "none";
 });
-
